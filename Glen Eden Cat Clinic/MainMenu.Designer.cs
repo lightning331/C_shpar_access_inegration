@@ -1,7 +1,7 @@
 ﻿
 namespace Glen_Eden_Cat_Clinic
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -39,6 +39,7 @@ namespace Glen_Eden_Cat_Clinic
             this.RemoveTreatmentButton = new System.Windows.Forms.Button();
             this.PrintInvoicesButton = new System.Windows.Forms.Button();
             this.PrintReportButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddVisitButton
@@ -133,11 +134,21 @@ namespace Glen_Eden_Cat_Clinic
             this.PrintReportButton.Text = "Print veterinarians report";
             this.PrintReportButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(305, 465);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 473);
+            this.ClientSize = new System.Drawing.Size(690, 544);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.PrintReportButton);
             this.Controls.Add(this.PrintInvoicesButton);
             this.Controls.Add(this.RemoveTreatmentButton);
@@ -148,8 +159,8 @@ namespace Glen_Eden_Cat_Clinic
             this.Controls.Add(this.DeleteVisitButton);
             this.Controls.Add(this.UpdateVisitButton);
             this.Controls.Add(this.AddVisitButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainMenu";
+            this.Text = "Glen Eden Cat Clinic";
             this.ResumeLayout(false);
 
         }
@@ -166,6 +177,7 @@ namespace Glen_Eden_Cat_Clinic
         private System.Windows.Forms.Button RemoveTreatmentButton;
         private System.Windows.Forms.Button PrintInvoicesButton;
         private System.Windows.Forms.Button PrintReportButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 
