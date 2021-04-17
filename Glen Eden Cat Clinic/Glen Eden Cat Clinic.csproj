@@ -73,6 +73,12 @@
       <DependentUpon>AddVisitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DBManage\Connection.cs" />
+    <Compile Include="DeleteVisit\DeleteVisitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteVisit\DeleteVisitForm.Designer.cs">
+      <DependentUpon>DeleteVisitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="AddVisit\AddVisitForm.resx">
       <DependentUpon>AddVisitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteVisit\DeleteVisitForm.resx">
+      <DependentUpon>DeleteVisitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -127,5 +136,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -103,7 +103,6 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(137, 21);
             this.comboBoxStatus.TabIndex = 13;
-            this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxStatus_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -144,7 +143,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 49);
+            this.label1.Location = new System.Drawing.Point(66, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 12;

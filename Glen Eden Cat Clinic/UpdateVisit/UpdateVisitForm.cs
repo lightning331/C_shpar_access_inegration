@@ -69,11 +69,6 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
 
             }
         }
-        private void comboBoxStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void UpdateVisitButton_Click(object sender, EventArgs e)
         {
             if (textFee.Text.Trim() == string.Empty || textDescription.Text.Trim() == string.Empty)

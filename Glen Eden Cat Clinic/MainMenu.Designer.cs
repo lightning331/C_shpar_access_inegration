@@ -44,7 +44,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // AddVisitButton
             // 
-            this.AddVisitButton.Location = new System.Drawing.Point(267, 53);
+            this.AddVisitButton.Location = new System.Drawing.Point(193, 53);
             this.AddVisitButton.Name = "AddVisitButton";
             this.AddVisitButton.Size = new System.Drawing.Size(141, 33);
             this.AddVisitButton.TabIndex = 0;
@@ -54,7 +54,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // UpdateVisitButton
             // 
-            this.UpdateVisitButton.Location = new System.Drawing.Point(267, 93);
+            this.UpdateVisitButton.Location = new System.Drawing.Point(193, 93);
             this.UpdateVisitButton.Name = "UpdateVisitButton";
             this.UpdateVisitButton.Size = new System.Drawing.Size(141, 32);
             this.UpdateVisitButton.TabIndex = 1;
@@ -64,16 +64,17 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // DeleteVisitButton
             // 
-            this.DeleteVisitButton.Location = new System.Drawing.Point(267, 131);
+            this.DeleteVisitButton.Location = new System.Drawing.Point(193, 131);
             this.DeleteVisitButton.Name = "DeleteVisitButton";
             this.DeleteVisitButton.Size = new System.Drawing.Size(141, 32);
             this.DeleteVisitButton.TabIndex = 1;
             this.DeleteVisitButton.Text = "Delete a visit";
             this.DeleteVisitButton.UseVisualStyleBackColor = true;
+            this.DeleteVisitButton.Click += new System.EventHandler(this.DeleteVisitButton_Click);
             // 
             // AddCartButton
             // 
-            this.AddCartButton.Location = new System.Drawing.Point(267, 169);
+            this.AddCartButton.Location = new System.Drawing.Point(193, 169);
             this.AddCartButton.Name = "AddCartButton";
             this.AddCartButton.Size = new System.Drawing.Size(141, 32);
             this.AddCartButton.TabIndex = 1;
@@ -82,7 +83,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // UpdateCartButton
             // 
-            this.UpdateCartButton.Location = new System.Drawing.Point(267, 207);
+            this.UpdateCartButton.Location = new System.Drawing.Point(193, 207);
             this.UpdateCartButton.Name = "UpdateCartButton";
             this.UpdateCartButton.Size = new System.Drawing.Size(141, 32);
             this.UpdateCartButton.TabIndex = 1;
@@ -91,7 +92,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // DeleteCartButton
             // 
-            this.DeleteCartButton.Location = new System.Drawing.Point(267, 245);
+            this.DeleteCartButton.Location = new System.Drawing.Point(193, 245);
             this.DeleteCartButton.Name = "DeleteCartButton";
             this.DeleteCartButton.Size = new System.Drawing.Size(141, 32);
             this.DeleteCartButton.TabIndex = 1;
@@ -100,7 +101,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // AssignTreatmentButton
             // 
-            this.AssignTreatmentButton.Location = new System.Drawing.Point(267, 283);
+            this.AssignTreatmentButton.Location = new System.Drawing.Point(193, 283);
             this.AssignTreatmentButton.Name = "AssignTreatmentButton";
             this.AssignTreatmentButton.Size = new System.Drawing.Size(141, 32);
             this.AssignTreatmentButton.TabIndex = 1;
@@ -109,7 +110,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // RemoveTreatmentButton
             // 
-            this.RemoveTreatmentButton.Location = new System.Drawing.Point(267, 321);
+            this.RemoveTreatmentButton.Location = new System.Drawing.Point(193, 321);
             this.RemoveTreatmentButton.Name = "RemoveTreatmentButton";
             this.RemoveTreatmentButton.Size = new System.Drawing.Size(141, 32);
             this.RemoveTreatmentButton.TabIndex = 1;
@@ -118,7 +119,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // PrintInvoicesButton
             // 
-            this.PrintInvoicesButton.Location = new System.Drawing.Point(267, 359);
+            this.PrintInvoicesButton.Location = new System.Drawing.Point(193, 359);
             this.PrintInvoicesButton.Name = "PrintInvoicesButton";
             this.PrintInvoicesButton.Size = new System.Drawing.Size(141, 32);
             this.PrintInvoicesButton.TabIndex = 1;
@@ -127,7 +128,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // PrintReportButton
             // 
-            this.PrintReportButton.Location = new System.Drawing.Point(267, 397);
+            this.PrintReportButton.Location = new System.Drawing.Point(193, 397);
             this.PrintReportButton.Name = "PrintReportButton";
             this.PrintReportButton.Size = new System.Drawing.Size(141, 32);
             this.PrintReportButton.TabIndex = 1;
@@ -136,7 +137,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(305, 465);
+            this.button1.Location = new System.Drawing.Point(231, 465);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -147,7 +148,7 @@ namespace Glen_Eden_Cat_Clinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 544);
+            this.ClientSize = new System.Drawing.Size(510, 513);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PrintReportButton);
             this.Controls.Add(this.PrintInvoicesButton);

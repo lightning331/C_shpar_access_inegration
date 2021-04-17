@@ -11,3 +11,4 @@ D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen Ed
 D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen Eden Cat Clinic.exe
 D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen Eden Cat Clinic.pdb
 D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen Eden Cat Clinic.csprojAssemblyReference.cache
+D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen_Eden_Cat_Clinic.DeleteVisit.DeleteVisitForm.resources

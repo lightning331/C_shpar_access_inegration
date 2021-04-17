@@ -1,4 +1,5 @@
 ﻿using Glen_Eden_Cat_Clinic.DBManage;
+using Glen_Eden_Cat_Clinic.DeleteVisit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,12 +11,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Glen_Eden_Cat_Clinic.UpdateVisit
 {
     public partial class VisitListForm : Form
     {
-        public VisitListForm()
+        private int visitToDo;
+        public VisitListForm(int status)
         {
+            //if status = 0, should update it in the listview
+            //if status = 1, should remove it in the listview
+            visitToDo = status;
+
             InitializeComponent();
             listView1.Columns[1].Width = 360;
             LoadData();
@@ -45,16 +52,32 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
                 }
 
             }
+
+            connection.Close();
         }
 
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             //this.DialogResult = DialogResult.OK;
             var visit_id = Convert.ToInt32(listView1.SelectedItems[0].Text);
-            UpdateVisitForm form = new UpdateVisitForm(visit_id);
-            if (form.ShowDialog() == DialogResult.OK)
+            if (visitToDo == 0)
             {
-                //textPhone.Text = new_cl.SelectPhone;
+                UpdateVisitForm form = new UpdateVisitForm(visit_id);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    //textPhone.Text = new_cl.SelectPhone;
+                }
+            }
+            else if (visitToDo == 1)
+            {
+                DeleteVisitForm form = new DeleteVisitForm(visit_id);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    //textPhone.Text = new_cl.SelectPhone;
+                    listView1.Items.Clear();
+                    LoadData();
+                }
+
             }
         }
 

@@ -30,9 +30,9 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
-            this.ReturnButton = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ReturnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -53,16 +53,6 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
-            // ReturnButton
-            // 
-            this.ReturnButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ReturnButton.Location = new System.Drawing.Point(392, 397);
-            this.ReturnButton.Name = "ReturnButton";
-            this.ReturnButton.Size = new System.Drawing.Size(75, 23);
-            this.ReturnButton.TabIndex = 1;
-            this.ReturnButton.Text = "Return";
-            this.ReturnButton.UseVisualStyleBackColor = true;
-            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Visit ID";
@@ -73,15 +63,25 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             this.columnHeader2.Text = "Description";
             this.columnHeader2.Width = 360;
             // 
-            // UpdateVisitForm
+            // ReturnButton
+            // 
+            this.ReturnButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.ReturnButton.Location = new System.Drawing.Point(392, 397);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(75, 23);
+            this.ReturnButton.TabIndex = 1;
+            this.ReturnButton.Text = "Return";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            // 
+            // VisitListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 433);
             this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.listView1);
-            this.Name = "UpdateVisitForm";
-            this.Text = "Update Visit";
+            this.Name = "VisitListForm";
+            this.Text = "Visit List";
             this.ResumeLayout(false);
 
         }

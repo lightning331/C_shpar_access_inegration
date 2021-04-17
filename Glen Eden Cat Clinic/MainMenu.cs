@@ -44,11 +44,19 @@ namespace Glen_Eden_Cat_Clinic
 
         private void UpdateVisitButton_Click(object sender, EventArgs e)
         {
-            VisitListForm new_cl = new VisitListForm();
+            VisitListForm new_cl = new VisitListForm(0);
             if (new_cl.ShowDialog() == DialogResult.OK)
             {
             }
 
+        }
+
+        private void DeleteVisitButton_Click(object sender, EventArgs e)
+        {
+            VisitListForm new_cl = new VisitListForm(1);
+            if (new_cl.ShowDialog() == DialogResult.OK)
+            {
+            }
         }
     }
 }
