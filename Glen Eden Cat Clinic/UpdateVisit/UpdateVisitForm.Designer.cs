@@ -71,14 +71,14 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // 
             // textFee
             // 
-            this.textFee.Location = new System.Drawing.Point(113, 155);
+            this.textFee.Location = new System.Drawing.Point(133, 137);
             this.textFee.Name = "textFee";
             this.textFee.Size = new System.Drawing.Size(100, 20);
             this.textFee.TabIndex = 17;
             // 
             // textDescription
             // 
-            this.textDescription.Location = new System.Drawing.Point(113, 85);
+            this.textDescription.Location = new System.Drawing.Point(133, 67);
             this.textDescription.Name = "textDescription";
             this.textDescription.Size = new System.Drawing.Size(200, 20);
             this.textDescription.TabIndex = 16;
@@ -87,7 +87,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // 
             this.VisitDate.CustomFormat = "MM/dd/yyyy";
             this.VisitDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.VisitDate.Location = new System.Drawing.Point(113, 120);
+            this.VisitDate.Location = new System.Drawing.Point(133, 102);
             this.VisitDate.Name = "VisitDate";
             this.VisitDate.Size = new System.Drawing.Size(200, 20);
             this.VisitDate.TabIndex = 15;
@@ -99,7 +99,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             this.comboBoxStatus.Items.AddRange(new object[] {
             "Current",
             "Paid"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(112, 187);
+            this.comboBoxStatus.Location = new System.Drawing.Point(132, 169);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(137, 21);
             this.comboBoxStatus.TabIndex = 13;
@@ -107,7 +107,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 158);
+            this.label6.Location = new System.Drawing.Point(66, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 13);
             this.label6.TabIndex = 6;
@@ -116,7 +116,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 88);
+            this.label5.Location = new System.Drawing.Point(43, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 13);
             this.label5.TabIndex = 7;
@@ -125,7 +125,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 124);
+            this.label4.Location = new System.Drawing.Point(72, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 8;
@@ -134,7 +134,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 222);
+            this.label2.Location = new System.Drawing.Point(70, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 10;
@@ -143,7 +143,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 53);
+            this.label1.Location = new System.Drawing.Point(86, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 12;
@@ -151,7 +151,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // 
             // textVisitID
             // 
-            this.textVisitID.Location = new System.Drawing.Point(115, 49);
+            this.textVisitID.Location = new System.Drawing.Point(135, 31);
             this.textVisitID.Name = "textVisitID";
             this.textVisitID.ReadOnly = true;
             this.textVisitID.Size = new System.Drawing.Size(81, 20);
@@ -159,7 +159,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // 
             // textCat
             // 
-            this.textCat.Location = new System.Drawing.Point(113, 219);
+            this.textCat.Location = new System.Drawing.Point(133, 201);
             this.textCat.Name = "textCat";
             this.textCat.ReadOnly = true;
             this.textCat.Size = new System.Drawing.Size(81, 20);
@@ -168,7 +168,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 257);
+            this.label7.Location = new System.Drawing.Point(34, 239);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 13);
             this.label7.TabIndex = 10;
@@ -176,7 +176,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // 
             // textLastName
             // 
-            this.textLastName.Location = new System.Drawing.Point(113, 254);
+            this.textLastName.Location = new System.Drawing.Point(133, 236);
             this.textLastName.Name = "textLastName";
             this.textLastName.ReadOnly = true;
             this.textLastName.Size = new System.Drawing.Size(81, 20);
@@ -185,7 +185,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 292);
+            this.label8.Location = new System.Drawing.Point(34, 274);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 13);
             this.label8.TabIndex = 10;
@@ -193,7 +193,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // 
             // textFirstName
             // 
-            this.textFirstName.Location = new System.Drawing.Point(113, 289);
+            this.textFirstName.Location = new System.Drawing.Point(133, 271);
             this.textFirstName.Name = "textFirstName";
             this.textFirstName.ReadOnly = true;
             this.textFirstName.Size = new System.Drawing.Size(81, 20);
@@ -202,7 +202,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(66, 190);
+            this.label9.Location = new System.Drawing.Point(86, 172);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 10;
@@ -212,7 +212,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 411);
+            this.ClientSize = new System.Drawing.Size(505, 411);
             this.Controls.Add(this.textFirstName);
             this.Controls.Add(this.textLastName);
             this.Controls.Add(this.textCat);

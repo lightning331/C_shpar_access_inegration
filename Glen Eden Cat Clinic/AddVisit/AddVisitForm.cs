@@ -1,4 +1,5 @@
 ﻿using Glen_Eden_Cat_Clinic.DBManage;
+using Glen_Eden_Cat_Clinic.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,90 +16,26 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
 {
     public partial class AddVisitForm : Form
     {
-        private List<int> ownerIdArray = new List<int>{};
-        private List<int> catIdArray = new List<int> { };
-        private List<int> veterinarianIdArray = new List<int> { };
-        private int ownerIndex = -1;
-        private int catIndex = -1;
-        private int veterinarianIndex = -1;
-        public AddVisitForm()
+        private VisitModel model;
+        public AddVisitForm(VisitModel model)
         {
+            this.model = model;
             InitializeComponent();
             LoadData();
-/*            comboBoxOwner.Items.Insert(0, "select1");
-            comboBoxOwner.Items.Insert(1, "select2");
-*/        }
+        }
 
         private void LoadData()
         {
-            
-            OleDbConnection connection = DBConnection.Open();
-
-            //read the owner list
-            string strSQL = @"SELECT * FROM OWNER WHERE CreditStatus ='Valid'";
-            OleDbCommand command = new OleDbCommand(strSQL, connection);
-            // Execute command    
-            OleDbDataReader reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
-            {
-                ownerIdArray.Add(Convert.ToInt32(reader["OwnerID"]));
-                comboBoxOwner.Items.Insert(i, reader["LastName"].ToString() + " " + reader["FirstName"].ToString());
-                i++;
-            }
-
-            //read veterinarian
-            strSQL = @"SELECT * FROM VETERINARIAN";
-            command = new OleDbCommand(strSQL, connection);
-            // Execute command    
-            reader = command.ExecuteReader();
-            i = 0;
-            while (reader.Read())
-            {
-                veterinarianIdArray.Add(Convert.ToInt32(reader["VeterinarianID"]));
-                comboBoxVeterinarian.Items.Insert(i, reader["LastName"].ToString() + " " + reader["FirstName"].ToString());
-                i++;
-            }
-
-
-            connection.Close();
+            textOwnerId.Text = model.OwnerId.ToString();
+            textOwnerLastName.Text = model.OwnerLastName;
+            textOwnerFirstName.Text = model.OwnerFirstName;
+            textCatId.Text = model.CatId.ToString();
+            textCatName.Text = model.CatName;
+            textVeterId.Text = model.VeterinarianId.ToString();
+            textVeterLastName.Text = model.VeterinarianLastName;
+            textVeterFirstName.Text = model.VeterinarianFirstName;
         }
 
-        private void comboBoxOwner_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ownerIndex = comboBoxOwner.SelectedIndex;
-
-            OleDbConnection connection = DBConnection.Open();
-
-            //read the cat list
-            string strSQL = @"SELECT * FROM CAT WHERE OwnerID = @ownerId";
-            OleDbCommand command = new OleDbCommand(strSQL, connection);
-            command.Parameters.AddWithValue("@ownerId", ownerIdArray[ownerIndex]); //selOwnerId
-            // Execute command    
-            OleDbDataReader reader = command.ExecuteReader();
-
-            int i = 0;
-            comboBoxCat.Items.Clear();
-            catIdArray.Clear();
-            catIndex = -1;
-            while (reader.Read())
-            {
-                catIdArray.Add(Convert.ToInt32(reader["CatId"]));
-                comboBoxCat.Items.Insert(i, reader["CatName"].ToString());
-                i++;
-            }
-
-            connection.Close();
-        }
-
-        private void comboBoxCat_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            catIndex = comboBoxCat.SelectedIndex;
-        }
-        private void comboBoxVeterinarian_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            veterinarianIndex = comboBoxVeterinarian.SelectedIndex;
-        }
 
         private void textFee_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -115,8 +52,7 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
 
         private void AddVisitButton_Click(object sender, EventArgs e)
         {
-            if (ownerIndex == -1 || catIndex == -1 || veterinarianIndex == -1 || 
-                textFee.Text.Trim() == string.Empty || textDescription.Text.Trim() == string.Empty)
+            if (textFee.Text.Trim() == string.Empty || textDescription.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Please fill in all fields correctly");
                 return;
@@ -135,8 +71,8 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
             command.Parameters.AddWithValue("@date", VisitDate.Value.ToString("MM/dd/yyyy"));
             command.Parameters.AddWithValue("@status", "Current");
             command.Parameters.AddWithValue("@fee", Convert.ToDecimal(textFee.Text.Trim()));
-            command.Parameters.AddWithValue("@catid", catIdArray[catIndex]);
-            command.Parameters.AddWithValue("@verterinarianid", veterinarianIdArray[veterinarianIndex]);
+            command.Parameters.AddWithValue("@catid", model.CatId);
+            command.Parameters.AddWithValue("@verterinarianid", model.VeterinarianId);
             
             command.ExecuteReader();
 

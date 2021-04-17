@@ -36,7 +36,7 @@ namespace Glen_Eden_Cat_Clinic
 
         private void AddVisitButton_Click(object sender, EventArgs e)
         {
-            AddVisitForm new_cl = new AddVisitForm();
+            OwnerListForm new_cl = new OwnerListForm();
             if (new_cl.ShowDialog() == DialogResult.OK)
             {
             }
