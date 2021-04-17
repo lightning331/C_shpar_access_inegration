@@ -1,4 +1,5 @@
-﻿using Glen_Eden_Cat_Clinic.DBManage;
+﻿using Glen_Eden_Cat_Clinic.AddCat;
+using Glen_Eden_Cat_Clinic.DBManage;
 using Glen_Eden_Cat_Clinic.Models;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,13 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
 {
     public partial class OwnerListForm : Form
     {
-        private VisitModel model = new VisitModel();
-        public OwnerListForm()
+        private int formType; //0 - adding visit, 1 - adding cat
+        private VisitModel modelVisit = new VisitModel();
+        private CatModel modelCat = new CatModel();
+        public OwnerListForm(int type)
         {
+            formType = type;
             InitializeComponent();
-            //listOwner.Columns[1].Width = 360;
             LoadData();
         }
 
@@ -52,16 +55,24 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
         {
             //this.DialogResult = DialogResult.OK;
             ListViewItem item = listOwner.SelectedItems[0];
-            model.OwnerId = Convert.ToInt32(item.SubItems[0].Text);
-            model.OwnerLastName = item.SubItems[1].Text;
-            model.OwnerFirstName = item.SubItems[2].Text;
-
 
             this.Close(); //close current form
-            CatListForm form = new CatListForm(model: model);
-            if (form.ShowDialog() == DialogResult.OK)
+            if (formType == 0)
             {
-                //textPhone.Text = new_cl.SelectPhone;
+                modelVisit.OwnerId = Convert.ToInt32(item.SubItems[0].Text);
+                modelVisit.OwnerLastName = item.SubItems[1].Text;
+                modelVisit.OwnerFirstName = item.SubItems[2].Text;
+                CatListForm form = new CatListForm(model: modelVisit);
+                form.ShowDialog();
+            }
+            else
+            {
+                modelCat.OwnerId = Convert.ToInt32(item.SubItems[0].Text);
+                modelCat.OwnerLastName = item.SubItems[1].Text;
+                modelCat.OwnerFirstName = item.SubItems[2].Text;
+                AddCatForm form = new AddCatForm(model: modelCat);
+                form.ShowDialog();
+
             }
         }
 

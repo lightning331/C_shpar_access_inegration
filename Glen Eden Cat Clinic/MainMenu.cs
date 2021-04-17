@@ -36,27 +36,27 @@ namespace Glen_Eden_Cat_Clinic
 
         private void AddVisitButton_Click(object sender, EventArgs e)
         {
-            OwnerListForm new_cl = new OwnerListForm();
-            if (new_cl.ShowDialog() == DialogResult.OK)
-            {
-            }
+            OwnerListForm form = new OwnerListForm(0);
+            form.ShowDialog();
         }
 
         private void UpdateVisitButton_Click(object sender, EventArgs e)
         {
-            VisitListForm new_cl = new VisitListForm(0);
-            if (new_cl.ShowDialog() == DialogResult.OK)
-            {
-            }
+            VisitListForm form = new VisitListForm(0);
+            form.ShowDialog();
 
         }
 
         private void DeleteVisitButton_Click(object sender, EventArgs e)
         {
-            VisitListForm new_cl = new VisitListForm(1);
-            if (new_cl.ShowDialog() == DialogResult.OK)
-            {
-            }
+            VisitListForm form = new VisitListForm(1);
+            form.ShowDialog();
+        }
+
+        private void AddCartButton_Click(object sender, EventArgs e)
+        {
+            OwnerListForm form = new OwnerListForm(1);
+            form.ShowDialog();
         }
     }
 }

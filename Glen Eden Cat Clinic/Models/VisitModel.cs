@@ -8,7 +8,7 @@ namespace Glen_Eden_Cat_Clinic.Models
 {
     public class VisitModel
     {
-        public int     OwnerId;
+        public int      OwnerId;
         public string   OwnerLastName;
         public string   OwnerFirstName;
         public int      CatId;
@@ -22,6 +22,11 @@ namespace Glen_Eden_Cat_Clinic.Models
             OwnerId = -1;
             OwnerLastName = "";
             OwnerFirstName = "";
+            CatId = -1;
+            CatName = "";
+            VeterinarianId = -1;
+            VeterinarianLastName = "";
+            VeterinarianFirstName = "";
         }
     }
 }

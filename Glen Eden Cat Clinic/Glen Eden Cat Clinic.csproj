@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCat\AddCatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCat\AddCatForm.Designer.cs">
+      <DependentUpon>AddCatForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddVisit\AddVisitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,7 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CatModel.cs" />
     <Compile Include="Models\VisitModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,6 +125,9 @@
     <Compile Include="UpdateVisit\VisitListForm.Designer.cs">
       <DependentUpon>VisitListForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCat\AddCatForm.resx">
+      <DependentUpon>AddCatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddVisit\AddVisitForm.resx">
       <DependentUpon>AddVisitForm.cs</DependentUpon>
     </EmbeddedResource>

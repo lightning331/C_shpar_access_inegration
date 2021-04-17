@@ -80,6 +80,7 @@ namespace Glen_Eden_Cat_Clinic
             this.AddCartButton.TabIndex = 1;
             this.AddCartButton.Text = "Add a cart";
             this.AddCartButton.UseVisualStyleBackColor = true;
+            this.AddCartButton.Click += new System.EventHandler(this.AddCartButton_Click);
             // 
             // UpdateCartButton
             // 
