@@ -1,5 +1,7 @@
-﻿using Glen_Eden_Cat_Clinic.DBManage;
+﻿using Glen_Eden_Cat_Clinic.AddCat;
+using Glen_Eden_Cat_Clinic.DBManage;
 using Glen_Eden_Cat_Clinic.Models;
+using Glen_Eden_Cat_Clinic.UpdateCat;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +17,12 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
 {
     public partial class CatListForm : Form
     {
-        private VisitModel model;
-        public CatListForm(VisitModel model)
+        private VisitModel  model;
+        private int isDelete;
+        public CatListForm(VisitModel model, int is_delete = 0)
         {
             this.model = model;
+            this.isDelete = is_delete;
             InitializeComponent();
             LoadData();
         }
@@ -27,9 +31,19 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
             OleDbConnection connection = DBConnection.Open();
 
             //read the cat list
-            string strSQL = @"SELECT * FROM CAT WHERE OwnerID = @ownerId";
-            OleDbCommand command = new OleDbCommand(strSQL, connection);
-            command.Parameters.AddWithValue("@ownerId", model.OwnerId); //selOwnerId
+            string strSQL;
+            OleDbCommand command;
+            if (model != null)
+            {
+                strSQL = @"SELECT * FROM CAT WHERE OwnerID = @ownerId";
+                command = new OleDbCommand(strSQL, connection);
+                command.Parameters.AddWithValue("@ownerId", model.OwnerId); //selOwnerId
+            }
+            else
+            {
+                strSQL = @"SELECT * FROM CAT";
+                command = new OleDbCommand(strSQL, connection);
+            }
             // Execute command    
             OleDbDataReader reader = command.ExecuteReader();
 
@@ -46,16 +60,22 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             ListViewItem item = listView1.SelectedItems[0];
-            model.CatId = Convert.ToInt32(item.SubItems[0].Text);
-            model.CatName = item.SubItems[1].Text;
 
-            this.Close();
-            VeterinarianListForm form = new VeterinarianListForm(model: model);
-            if (form.ShowDialog() == DialogResult.OK)
+            if (model != null)
             {
-                //textPhone.Text = new_cl.SelectPhone;
-            }
+                model.CatId = Convert.ToInt32(item.SubItems[0].Text);
+                model.CatName = item.SubItems[1].Text;
 
+                this.Close();
+                VeterinarianListForm form = new VeterinarianListForm(model: model);
+                form.ShowDialog();
+            }
+            else
+            {
+                this.Close();
+                UpdateCatForm form = new UpdateCatForm(Convert.ToInt32(item.SubItems[0].Text), isDelete);
+                form.ShowDialog();
+            }
         }
     }
 }

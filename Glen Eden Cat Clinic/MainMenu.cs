@@ -58,5 +58,17 @@ namespace Glen_Eden_Cat_Clinic
             OwnerListForm form = new OwnerListForm(1);
             form.ShowDialog();
         }
+
+        private void UpdateCartButton_Click(object sender, EventArgs e)
+        {
+            CatListForm form = new CatListForm(model: null, 0);
+            form.ShowDialog();
+        }
+
+        private void DeleteCartButton_Click(object sender, EventArgs e)
+        {
+            CatListForm form = new CatListForm(model: null, 1);
+            form.ShowDialog();
+        }
     }
 }

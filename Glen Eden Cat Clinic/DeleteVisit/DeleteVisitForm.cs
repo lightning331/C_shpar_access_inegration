@@ -25,7 +25,7 @@ namespace Glen_Eden_Cat_Clinic.DeleteVisit
         {
             OleDbConnection connection = DBConnection.Open();
 
-            //read the owner list
+            //read the visit list
             string strSQL = @"SELECT * FROM VISIT WHERE VisitID = @id";
             OleDbCommand command = new OleDbCommand(strSQL, connection);
             command.Parameters.AddWithValue("@ownerId", visitId);

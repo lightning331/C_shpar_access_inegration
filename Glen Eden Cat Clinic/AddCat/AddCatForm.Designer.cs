@@ -149,7 +149,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             this.groupBox2.Controls.Add(this.labelCatName);
             this.groupBox2.Location = new System.Drawing.Point(30, 99);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(509, 198);
+            this.groupBox2.Size = new System.Drawing.Size(509, 251);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cat Details";
@@ -157,7 +157,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             // labelCatName
             // 
             this.labelCatName.AutoSize = true;
-            this.labelCatName.Location = new System.Drawing.Point(49, 34);
+            this.labelCatName.Location = new System.Drawing.Point(44, 46);
             this.labelCatName.Name = "labelCatName";
             this.labelCatName.Size = new System.Drawing.Size(38, 13);
             this.labelCatName.TabIndex = 0;
@@ -165,7 +165,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             // 
             // textCatName
             // 
-            this.textCatName.Location = new System.Drawing.Point(90, 31);
+            this.textCatName.Location = new System.Drawing.Point(85, 43);
             this.textCatName.Name = "textCatName";
             this.textCatName.Size = new System.Drawing.Size(200, 20);
             this.textCatName.TabIndex = 1;
@@ -173,7 +173,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 68);
+            this.label3.Location = new System.Drawing.Point(37, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 0;
@@ -182,7 +182,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 103);
+            this.label4.Location = new System.Drawing.Point(43, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 0;
@@ -190,7 +190,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             // 
             // textCatBreed
             // 
-            this.textCatBreed.Location = new System.Drawing.Point(90, 100);
+            this.textCatBreed.Location = new System.Drawing.Point(85, 112);
             this.textCatBreed.Name = "textCatBreed";
             this.textCatBreed.Size = new System.Drawing.Size(200, 20);
             this.textCatBreed.TabIndex = 1;
@@ -199,7 +199,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             // 
             this.BirthDate.CustomFormat = "MM/dd/yyyy";
             this.BirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.BirthDate.Location = new System.Drawing.Point(90, 135);
+            this.BirthDate.Location = new System.Drawing.Point(85, 147);
             this.BirthDate.Name = "BirthDate";
             this.BirthDate.Size = new System.Drawing.Size(200, 20);
             this.BirthDate.TabIndex = 4;
@@ -207,7 +207,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 139);
+            this.label5.Location = new System.Drawing.Point(13, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 3;
@@ -220,7 +220,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             this.comboCatGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboCatGender.Location = new System.Drawing.Point(90, 66);
+            this.comboCatGender.Location = new System.Drawing.Point(85, 78);
             this.comboCatGender.Name = "comboCatGender";
             this.comboCatGender.Size = new System.Drawing.Size(200, 21);
             this.comboCatGender.TabIndex = 5;
@@ -235,7 +235,7 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             this.Controls.Add(this.AddCatButton);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddCatForm";
-            this.Text = "AddCatForm";
+            this.Text = "Add Cat";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

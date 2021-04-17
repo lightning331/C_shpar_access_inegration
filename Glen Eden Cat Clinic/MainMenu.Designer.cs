@@ -90,6 +90,7 @@ namespace Glen_Eden_Cat_Clinic
             this.UpdateCartButton.TabIndex = 1;
             this.UpdateCartButton.Text = "Update a cart";
             this.UpdateCartButton.UseVisualStyleBackColor = true;
+            this.UpdateCartButton.Click += new System.EventHandler(this.UpdateCartButton_Click);
             // 
             // DeleteCartButton
             // 
@@ -99,6 +100,7 @@ namespace Glen_Eden_Cat_Clinic
             this.DeleteCartButton.TabIndex = 1;
             this.DeleteCartButton.Text = "Delete a cart";
             this.DeleteCartButton.UseVisualStyleBackColor = true;
+            this.DeleteCartButton.Click += new System.EventHandler(this.DeleteCartButton_Click);
             // 
             // AssignTreatmentButton
             // 
