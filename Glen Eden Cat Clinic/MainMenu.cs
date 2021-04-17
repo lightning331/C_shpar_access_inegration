@@ -11,6 +11,7 @@ using System;
 using System.Data.OleDb;
 using Glen_Eden_Cat_Clinic.DBManage;
 using Glen_Eden_Cat_Clinic.AddVisit;
+using Glen_Eden_Cat_Clinic.UpdateVisit;
 
 namespace Glen_Eden_Cat_Clinic
 {
@@ -38,13 +39,16 @@ namespace Glen_Eden_Cat_Clinic
             AddVisitForm new_cl = new AddVisitForm();
             if (new_cl.ShowDialog() == DialogResult.OK)
             {
-                //do something
             }
         }
 
         private void UpdateVisitButton_Click(object sender, EventArgs e)
         {
-            
+            VisitListForm new_cl = new VisitListForm();
+            if (new_cl.ShowDialog() == DialogResult.OK)
+            {
+            }
+
         }
     }
 }

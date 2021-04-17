@@ -118,7 +118,7 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
             if (ownerIndex == -1 || catIndex == -1 || veterinarianIndex == -1 || 
                 textFee.Text.Trim() == string.Empty || textDescription.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Please fill all the fields", "Error!");
+                MessageBox.Show("Please fill in all fields correctly");
                 return;
             }
 
@@ -142,7 +142,8 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
 
             connection.Close();
 
-            MessageBox.Show("Visit added successfully", "Success!");
+            MessageBox.Show("Visit added successfully");
+            //exit current UI
             this.DialogResult = DialogResult.OK;
         }
 
