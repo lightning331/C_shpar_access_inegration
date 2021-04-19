@@ -120,6 +120,7 @@ namespace Glen_Eden_Cat_Clinic
             this.RemoveTreatmentButton.TabIndex = 1;
             this.RemoveTreatmentButton.Text = "Remove Treatment";
             this.RemoveTreatmentButton.UseVisualStyleBackColor = true;
+            this.RemoveTreatmentButton.Click += new System.EventHandler(this.RemoveTreatmentButton_Click);
             // 
             // PrintInvoicesButton
             // 

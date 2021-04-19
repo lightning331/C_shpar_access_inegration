@@ -76,5 +76,11 @@ namespace Glen_Eden_Cat_Clinic
             VisitListForm form = new VisitListForm(2);
             form.ShowDialog();
         }
+
+        private void RemoveTreatmentButton_Click(object sender, EventArgs e)
+        {
+            VisitListForm form = new VisitListForm(3);
+            form.ShowDialog();
+        }
     }
 }

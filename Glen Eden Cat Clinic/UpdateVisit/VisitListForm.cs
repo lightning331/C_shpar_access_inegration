@@ -1,6 +1,7 @@
 ﻿using Glen_Eden_Cat_Clinic.AssignTreatment;
 using Glen_Eden_Cat_Clinic.DBManage;
 using Glen_Eden_Cat_Clinic.DeleteVisit;
+using Glen_Eden_Cat_Clinic.RemoveTreatment;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,6 +86,13 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
             {
                 this.Close();
                 AssignTreatmentForm form = new AssignTreatmentForm(visit_id);
+                form.ShowDialog();
+            }
+
+            else if (visitToDo == 3)
+            {
+                this.Close();
+                RemoveTreatmentForm form = new RemoveTreatmentForm(visit_id);
                 form.ShowDialog();
             }
         }

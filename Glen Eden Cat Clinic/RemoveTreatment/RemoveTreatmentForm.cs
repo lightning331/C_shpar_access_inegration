@@ -10,18 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Glen_Eden_Cat_Clinic.AssignTreatment
+namespace Glen_Eden_Cat_Clinic.RemoveTreatment
 {
-    public partial class AssignTreatmentForm : Form
+    public partial class RemoveTreatmentForm : Form
     {
         private int visitId;
-        private List<int> treatmentIds = new List<int>();
-        public AssignTreatmentForm(int visit_id)
+        public RemoveTreatmentForm(int visit_id)
         {
             this.visitId = visit_id;
             InitializeComponent();
             LoadData();
         }
+
         private void LoadData()
         {
             OleDbConnection connection = DBConnection.Open();
@@ -36,14 +36,25 @@ namespace Glen_Eden_Cat_Clinic.AssignTreatment
                 labelDescription.Text = reader["VisitDescription"].ToString();
                 BirthDate.Text = reader["VisitDate"].ToString();
 
+
                 strSQL = @"SELECT * FROM CAT WHERE CatID = @id";
                 command = new OleDbCommand(strSQL, connection);
                 command.Parameters.AddWithValue("@id", Convert.ToInt32(reader["CatID"]));
                 reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    labelCatID.Text = reader["CatID"].ToString();
                     labelCatName.Text = reader["CatName"].ToString();
+
+                    int owner_id = Convert.ToInt32(reader["OwnerID"]);
+                    strSQL = @"SELECT * FROM OWNER WHERE OwnerID = @id";
+                    command = new OleDbCommand(strSQL, connection);
+                    command.Parameters.AddWithValue("@id", owner_id);
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        labelOwnerLastName.Text = reader["LastName"].ToString();
+                        labelOwnerFirstName.Text = reader["FirstName"].ToString();
+                    }
                 }
 
                 strSQL = @"SELECT * FROM VISITTREATMENT WHERE VisitID = @id";
@@ -53,7 +64,7 @@ namespace Glen_Eden_Cat_Clinic.AssignTreatment
                 while (reader.Read())
                 {
                     long treatmentId = Convert.ToInt32(reader["TreatmentID"]);
-                    
+
                     strSQL = @"SELECT * FROM TREATMENT WHERE TreatmentID = @id";
                     command = new OleDbCommand(strSQL, connection);
                     command.Parameters.AddWithValue("@id", treatmentId);
@@ -70,53 +81,35 @@ namespace Glen_Eden_Cat_Clinic.AssignTreatment
                 }
             }
 
-            strSQL = @"SELECT * FROM TREATMENT";
-            command = new OleDbCommand(strSQL, connection);
-            reader = command.ExecuteReader();
-            int i = 0;
-            while (reader.Read())
-            {
-                comboTreatments.Items.Insert(i, reader["TreatmentDescription"].ToString());
-                treatmentIds.Add(Convert.ToInt32(reader["TreatmentID"]));
-                i++;
-            }
             connection.Close();
 
-        }
-        private void textQuantity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
         }
 
         private void AssignTreatmentButton_Click(object sender, EventArgs e)
         {
-            if (comboTreatments.SelectedIndex < 0 || textQuantity.Text.Trim() == String.Empty)
+            if (listView1.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Please fill in all fields correctly");
+                MessageBox.Show("Please selecte a treatment to remove");
                 return;
             }
+            ListViewItem item = listView1.SelectedItems[0];
+            int treatmentid =  Convert.ToInt32(item.SubItems[0].Text);
+            int quantity = Convert.ToInt32(item.SubItems[2].Text);
+
+            string strSQL = @"DELETE FROM VISITTREATMENT WHERE VisitID = @visit_id AND TreatmentID=@treatment_id AND Quantity=@quantity";
 
             OleDbConnection connection = DBConnection.Open();
 
-            //Insert a new Visit to the database
-            string strSQL = @"INSERT INTO VISITTREATMENT (VisitID, TreatmentID, Quantity) " +
-                "VALUES (@visit_id, @treatment_id, @quantity)";
-
             OleDbCommand command = new OleDbCommand(strSQL, connection);
-            command.Parameters.AddWithValue("@visit_id", visitId);
-            command.Parameters.AddWithValue("@treatment_id", treatmentIds[comboTreatments.SelectedIndex]);
-            command.Parameters.AddWithValue("@quantity", Convert.ToInt32(textQuantity.Text.Trim()));
+            command.Parameters.AddWithValue("@visit_id", this.visitId);
+            command.Parameters.AddWithValue("@treatment_id", treatmentid);
+            command.Parameters.AddWithValue("@quantity", quantity);
 
             command.ExecuteReader();
 
-            MessageBox.Show("Treatment assigned successfully");
-
-            connection.Close();
+            MessageBox.Show("Treatment removed successfully");
+            this.DialogResult = DialogResult.OK;
 
         }
-
     }
 }
