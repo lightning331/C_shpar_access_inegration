@@ -96,6 +96,12 @@
     <Compile Include="AddVisit\VeterinarianListForm.Designer.cs">
       <DependentUpon>VeterinarianListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssignTreatment\AssignTreatmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignTreatment\AssignTreatmentForm.Designer.cs">
+      <DependentUpon>AssignTreatmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBManage\Connection.cs" />
     <Compile Include="DeleteVisit\DeleteVisitForm.cs">
       <SubType>Form</SubType>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddVisit\VeterinarianListForm.resx">
       <DependentUpon>VeterinarianListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignTreatment\AssignTreatmentForm.resx">
+      <DependentUpon>AssignTreatmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteVisit\DeleteVisitForm.resx">
       <DependentUpon>DeleteVisitForm.cs</DependentUpon>

@@ -38,7 +38,8 @@ namespace Glen_Eden_Cat_Clinic.DeleteVisit
                 {
                     labelVisitID.Text = reader["VisitID"].ToString();
                     labelDescription.Text = reader["VisitDescription"].ToString();
-                    labelDate.Text = reader["VisitDate"].ToString();
+                    DateTime dt = DateTime.Parse(reader["VisitDate"].ToString());
+                    labelDate.Text = dt.ToString("MM/dd/yyyy");//reader["VisitDate"].ToString();
                     labelVisitFee.Text = reader["Fee"].ToString();
                     labelStatus.Text = reader["Status"].ToString();
                 }

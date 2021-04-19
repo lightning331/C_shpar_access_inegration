@@ -1,4 +1,5 @@
-﻿using Glen_Eden_Cat_Clinic.DBManage;
+﻿using Glen_Eden_Cat_Clinic.AssignTreatment;
+using Glen_Eden_Cat_Clinic.DBManage;
 using Glen_Eden_Cat_Clinic.DeleteVisit;
 using System;
 using System.Collections.Generic;
@@ -19,12 +20,13 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
         private int visitToDo;
         public VisitListForm(int status)
         {
-            //if status = 0, should update it in the listview
-            //if status = 1, should remove it in the listview
+            //if status = 0, go to the UpdateVisitForm
+            //if status = 1, go to the DeleteVisitForm
+            //if status = 2, go to the AssignTreatmentForm
             visitToDo = status;
 
             InitializeComponent();
-            listView1.Columns[1].Width = 360;
+            //listView1.Columns[1].Width = 360;
             LoadData();
         }
 
@@ -77,13 +79,15 @@ namespace Glen_Eden_Cat_Clinic.UpdateVisit
                     listView1.Items.Clear();
                     LoadData();
                 }
+            }
 
+            else if (visitToDo == 2)
+            {
+                this.Close();
+                AssignTreatmentForm form = new AssignTreatmentForm(visit_id);
+                form.ShowDialog();
             }
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

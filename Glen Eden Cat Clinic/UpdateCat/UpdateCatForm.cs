@@ -14,7 +14,7 @@ namespace Glen_Eden_Cat_Clinic.UpdateCat
 {
     public partial class UpdateCatForm : Form
     {
-        private int isDelete;
+        private int isDelete; //0 - update a cat, 1 - delete a cat
         private int catId;
         public UpdateCatForm(int cat_id, int is_delete)
         {
@@ -93,8 +93,6 @@ namespace Glen_Eden_Cat_Clinic.UpdateCat
 
                 command.ExecuteReader();
 
-                connection.Close();
-
                 MessageBox.Show("Cat updated successfully");
             } 
             else
@@ -107,12 +105,12 @@ namespace Glen_Eden_Cat_Clinic.UpdateCat
 
                 command.ExecuteReader();
 
-                connection.Close();
-
                 MessageBox.Show("Cat deleted successfully");
                 this.DialogResult = DialogResult.OK;
 
             }
+
+            connection.Close();
             //exit current UI
             this.DialogResult = DialogResult.OK;
 

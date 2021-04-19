@@ -47,8 +47,6 @@ namespace Glen_Eden_Cat_Clinic.AddCat
             string strSQL = @"INSERT INTO CAT (CatName, Breed, DateOfBirth, Gender, OwnerID) " +
                 "VALUES (@name, @breed, @birthdate, @gender, @ownerid)";
 
-            //string strSQL = @"INSERT INTO VISIT (VisitDescription, VisitDate, Status, Fee, CatID, VeterinarianID) VALUES ('test descri', '1/23/2022', 'Current', 23, 15, 2 )";
-
             OleDbCommand command = new OleDbCommand(strSQL, connection);
             command.Parameters.AddWithValue("@name", textCatName.Text.Trim());
             command.Parameters.AddWithValue("@breed", textCatBreed.Text.Trim());

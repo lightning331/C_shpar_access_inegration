@@ -64,8 +64,6 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
             string strSQL = @"INSERT INTO VISIT (VisitDescription, VisitDate, Status, Fee, CatID, VeterinarianID) " + 
                 "VALUES (@description, @date, @status, @fee, @catid, @verterinarianid) ";
 
-            //string strSQL = @"INSERT INTO VISIT (VisitDescription, VisitDate, Status, Fee, CatID, VeterinarianID) VALUES ('test descri', '1/23/2022', 'Current', 23, 15, 2 )";
-
             OleDbCommand command = new OleDbCommand(strSQL, connection);
             command.Parameters.AddWithValue("@description", textDescription.Text.Trim());
             command.Parameters.AddWithValue("@date", VisitDate.Value.ToString("MM/dd/yyyy"));

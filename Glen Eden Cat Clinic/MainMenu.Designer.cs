@@ -110,6 +110,7 @@ namespace Glen_Eden_Cat_Clinic
             this.AssignTreatmentButton.TabIndex = 1;
             this.AssignTreatmentButton.Text = "Assign Treatment";
             this.AssignTreatmentButton.UseVisualStyleBackColor = true;
+            this.AssignTreatmentButton.Click += new System.EventHandler(this.AssignTreatmentButton_Click);
             // 
             // RemoveTreatmentButton
             // 
