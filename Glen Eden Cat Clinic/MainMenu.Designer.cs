@@ -130,6 +130,7 @@ namespace Glen_Eden_Cat_Clinic
             this.PrintInvoicesButton.TabIndex = 1;
             this.PrintInvoicesButton.Text = "Print invoices";
             this.PrintInvoicesButton.UseVisualStyleBackColor = true;
+            this.PrintInvoicesButton.Click += new System.EventHandler(this.PrintInvoicesButton_Click);
             // 
             // PrintReportButton
             // 
@@ -139,6 +140,7 @@ namespace Glen_Eden_Cat_Clinic
             this.PrintReportButton.TabIndex = 1;
             this.PrintReportButton.Text = "Print veterinarians report";
             this.PrintReportButton.UseVisualStyleBackColor = true;
+            this.PrintReportButton.Click += new System.EventHandler(this.PrintReportButton_Click);
             // 
             // button1
             // 

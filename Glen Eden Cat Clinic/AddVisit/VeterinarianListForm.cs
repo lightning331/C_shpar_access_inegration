@@ -45,7 +45,7 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
         {
             //this.DialogResult = DialogResult.OK;
             ListViewItem item = listview1.SelectedItems[0];
-            model.VeterinarianId = Convert.ToInt32(item.SubItems[0].Text);
+            model.VeterinarianID = Convert.ToInt32(item.SubItems[0].Text);
             model.VeterinarianLastName = item.SubItems[1].Text;
             model.VeterinarianFirstName = item.SubItems[2].Text;
 

@@ -116,7 +116,21 @@
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CatModel.cs" />
+    <Compile Include="Models\VeterinarianReportModel.cs" />
     <Compile Include="Models\VisitModel.cs" />
+    <Compile Include="Models\VisitTreatmentModel.cs" />
+    <Compile Include="PrintInvoices\PrintInvoicesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintInvoices\PrintInvoicesForm.Designer.cs">
+      <DependentUpon>PrintInvoicesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintVeterinarians\PrintVeterinariansForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintVeterinarians\PrintVeterinariansForm.Designer.cs">
+      <DependentUpon>PrintVeterinariansForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveTreatment\RemoveTreatmentForm.cs">
@@ -166,6 +180,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintInvoices\PrintInvoicesForm.resx">
+      <DependentUpon>PrintInvoicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintVeterinarians\PrintVeterinariansForm.resx">
+      <DependentUpon>PrintVeterinariansForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

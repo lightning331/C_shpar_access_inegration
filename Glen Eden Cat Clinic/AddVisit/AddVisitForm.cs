@@ -31,7 +31,7 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
             textOwnerFirstName.Text = model.OwnerFirstName;
             textCatId.Text = model.CatId.ToString();
             textCatName.Text = model.CatName;
-            textVeterId.Text = model.VeterinarianId.ToString();
+            textVeterId.Text = model.VeterinarianID.ToString();
             textVeterLastName.Text = model.VeterinarianLastName;
             textVeterFirstName.Text = model.VeterinarianFirstName;
         }
@@ -70,7 +70,7 @@ namespace Glen_Eden_Cat_Clinic.AddVisit
             command.Parameters.AddWithValue("@status", "Current");
             command.Parameters.AddWithValue("@fee", Convert.ToDecimal(textFee.Text.Trim()));
             command.Parameters.AddWithValue("@catid", model.CatId);
-            command.Parameters.AddWithValue("@verterinarianid", model.VeterinarianId);
+            command.Parameters.AddWithValue("@verterinarianid", model.VeterinarianID);
             
             command.ExecuteReader();
 

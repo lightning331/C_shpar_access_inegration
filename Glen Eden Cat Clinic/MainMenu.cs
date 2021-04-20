@@ -12,6 +12,8 @@ using System.Data.OleDb;
 using Glen_Eden_Cat_Clinic.DBManage;
 using Glen_Eden_Cat_Clinic.AddVisit;
 using Glen_Eden_Cat_Clinic.UpdateVisit;
+using Glen_Eden_Cat_Clinic.PrintInvoices;
+using Glen_Eden_Cat_Clinic.PrintVeterinarians;
 
 namespace Glen_Eden_Cat_Clinic
 {
@@ -20,19 +22,7 @@ namespace Glen_Eden_Cat_Clinic
         public MainMenu()
         {
             InitializeComponent();
-
-/*            string strDSN = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = E:\\Database1.accdb";
-            string strSQL = "SELECT * FROM Foods";
-            // create Objects of ADOConnection and ADOCommand    
-            OleDbConnection myConn = new OleDbConnection(strDSN);
-            OleDbDataAdapter myCmd = new OleDbDataAdapter(strSQL, myConn);
-            myConn.Open();
-            DataSet dtSet = new DataSet();
-            myCmd.Fill(dtSet, "Developer");
-            DataTable dTable = dtSet.Tables[0];
-            //dataGridView1.DataSource = dtSet.Tables["Developer"].DefaultView;
-            myConn.Close();
-*/        }
+        }
 
         private void AddVisitButton_Click(object sender, EventArgs e)
         {
@@ -80,6 +70,18 @@ namespace Glen_Eden_Cat_Clinic
         private void RemoveTreatmentButton_Click(object sender, EventArgs e)
         {
             VisitListForm form = new VisitListForm(3);
+            form.ShowDialog();
+        }
+
+        private void PrintInvoicesButton_Click(object sender, EventArgs e)
+        {
+            PrintInvoicesForm form = new PrintInvoicesForm();
+            form.ShowDialog();
+        }
+
+        private void PrintReportButton_Click(object sender, EventArgs e)
+        {
+            PrintVeterinariansForm form = new PrintVeterinariansForm();
             form.ShowDialog();
         }
     }

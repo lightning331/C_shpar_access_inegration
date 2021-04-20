@@ -19,3 +19,5 @@ D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen_Ed
 D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen_Eden_Cat_Clinic.UpdateCat.UpdateCatForm.resources
 D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen_Eden_Cat_Clinic.AssignTreatment.AssignTreatmentForm.resources
 D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen_Eden_Cat_Clinic.RemoveTreatment.RemoveTreatmentForm.resources
+D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen_Eden_Cat_Clinic.PrintInvoices.PrintInvoicesForm.resources
+D:\.Net(c++, c#)\Glen Eden Cat Clinic\Glen Eden Cat Clinic\obj\x64\Debug\Glen_Eden_Cat_Clinic.PrintVeterinarians.PrintVeterinariansForm.resources
